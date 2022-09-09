@@ -2,7 +2,7 @@
   <div>
     <h2>Esta é uma descrição da pessoa {{ nome }}</h2>
     <Info />
-    <p>Mas também sei:</p>
+    <p>Mas também sei</p>
     <ol>
       <li>Python</li>
       <li>Java</li>
