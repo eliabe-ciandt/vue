@@ -11,10 +11,16 @@
     </ul>
     <p v-show="mostrar_email">Mande um email para {{ email }}</p>
     <p v-show="!mostrar_email">Fala comigo não, por favor</p>
+    <p>
+      Para acessar meu portifólio, clique
+      <a v-bind:href="meu_link">aqui</a>
+    </p>
+    <Picture />
   </div>
 </template>
 
 <script>
+import Picture from "./Picture.vue";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Info",
@@ -23,7 +29,9 @@ export default {
       esta_trabalhando: true,
       mostrar_email: true,
       email: "eliabe@ci&t.com",
+      meu_link: "https://github.com/eliabe-ciandt",
     };
   },
+  components: { Picture },
 };
 </script>
