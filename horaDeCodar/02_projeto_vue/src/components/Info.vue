@@ -2,20 +2,32 @@
   <div>
     <p v-if="esta_trabalhando">Atualmente trabalho no KOBOSS</p>
     <p v-else>Tô no deserto</p>
-    <p>Utilizo as seguintes tecnologias:</p>
+    <p>Conheço as seguintes tecnologias do back-end:</p>
+    <!-- eslint-disable-next-line vue/require-v-for-key -->
     <ul>
-      <li>JavaScript</li>
-      <li>Node</li>
-      <li>Vue</li>
-      <li>Bots</li>
+      <li v-for="(technology, index) in backEnd" v-bind:key="index">
+        {{ technology }}
+      </li>
     </ul>
-    <p v-show="mostrar_email">Mande um email para {{ email }}</p>
-    <p v-show="!mostrar_email">Fala comigo não, por favor</p>
-    <p>
-      Para acessar meu portifólio, clique
-      <a v-bind:href="meu_link">aqui</a>
-    </p>
-    <Picture />
+    <p>E conheço as seguintes tecnologias do front-end:</p>
+    <ul>
+      <li v-for="technology in frontEnd" :key="technology.id">
+        {{ technology.name }}
+      </li>
+    </ul>
+    <div>
+      <button @click="showEmail">{{ texto_botao }}</button>
+      <!-- <p><input type="checkbox" @click="showEmail" checked /></p> -->
+      <p v-show="!mostrar_email">Fala comigo não, por favor</p>
+    </div>
+    <div v-show="mostrar_email">
+      <p>Mande um email para {{ email }}</p>
+      <p class="classe">
+        Para acessar meu portifólio, clique
+        <a v-bind:href="meu_link">aqui</a>
+      </p>
+      <Picture />
+    </div>
   </div>
 </template>
 
@@ -27,11 +39,27 @@ export default {
   data() {
     return {
       esta_trabalhando: true,
-      mostrar_email: true,
+      mostrar_email: false,
       email: "eliabe@ci&t.com",
       meu_link: "https://github.com/eliabe-ciandt",
+      texto_botao: "Mostrar e-mail",
+      backEnd: ["Java", "Python", "Node"],
+      frontEnd: [
+        { id: 1, name: "JavaScript" },
+        { id: 2, name: "HTML" },
+        { id: 3, name: "CSS" },
+        { id: 4, name: "Vue" },
+      ],
     };
   },
   components: { Picture },
+  methods: {
+    showEmail() {
+      this.mostrar_email = !this.mostrar_email;
+      this.texto_botao = this.mostrar_email
+        ? "Esconder e-mail"
+        : "Mostrar e-mail";
+    },
+  },
 };
 </script>

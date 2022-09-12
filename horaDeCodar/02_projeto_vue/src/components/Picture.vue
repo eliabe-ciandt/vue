@@ -8,7 +8,8 @@ export default {
   name: "Picture",
   data() {
     return {
-      avatar: "02_projeto_vue/img/avatar.png",
+      avatar:
+        "https://i.kym-cdn.com/photos/images/original/000/916/872/942.jpg",
       descricao: "The true avatar",
     };
   },
