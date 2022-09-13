@@ -9,11 +9,11 @@
                     v-model="name" placeholder="Type your name">
                 </div>
                 <div class="input-container">
-                    <label for="bread">Choose your bread </label>
+                    <label for="bread">Choose your bread:</label>
                     <select name="bread" id="bread" v-model="bread">
                         <option value="">Select your bread </option>
-                        <option v-for="bread in breads" :key="bread.id"
-                        :value="bread.tipo">{{ bread.tipo }} </option>
+                        <option v-for="bread in breads"
+                        :key="bread.id" :value="bread.tipo">{{ bread.tipo }} </option>
                     </select>
                 </div>
                 <div class="input-container">

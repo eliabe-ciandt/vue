@@ -79,26 +79,9 @@
   ],
   "burgers": [
     {
-      "name": "super 0 hora",
-      "meat": "Picanha",
-      "bread": [
-        {
-          "id": 1,
-          "tipo": "Italiano Branco"
-        },
-        {
-          "id": 2,
-          "tipo": "3 Queijos"
-        },
-        {
-          "id": 3,
-          "tipo": "Parmesão e Orégano"
-        },
-        {
-          "id": 4,
-          "tipo": "Integral"
-        }
-      ],
+      "name": "Leandro",
+      "meat": "Alcatra",
+      "bread": "Italiano Branco",
       "optionals": [
         "Bacon",
         "Salame",
@@ -108,120 +91,59 @@
       "id": 1
     },
     {
-      "name": "IMP-ELI",
-      "meat": "Alcatra",
-      "bread": [
-        {
-          "id": 1,
-          "tipo": "Italiano Branco"
-        },
-        {
-          "id": 2,
-          "tipo": "3 Queijos"
-        },
-        {
-          "id": 3,
-          "tipo": "Parmesão e Orégano"
-        },
-        {
-          "id": 4,
-          "tipo": "Integral"
-        }
-      ],
+      "name": "Micaela",
+      "meat": "Picanha",
+      "bread": "3 Queijos",
       "optionals": [
-        "Bacon",
-        "Cheddar",
         "Salame",
-        "Cebola roxa"
+        "Bacon",
+        "Cheddar"
       ],
       "status": "Requested",
       "id": 2
     },
     {
-      "name": "IMP-ELI",
-      "meat": "Alcatra",
-      "bread": [
-        {
-          "id": 1,
-          "tipo": "Italiano Branco"
-        },
-        {
-          "id": 2,
-          "tipo": "3 Queijos"
-        },
-        {
-          "id": 3,
-          "tipo": "Parmesão e Orégano"
-        },
-        {
-          "id": 4,
-          "tipo": "Integral"
-        }
-      ],
+      "name": "Fernando",
+      "meat": "Picanha",
+      "bread": "Parmesão e Orégano",
       "optionals": [
         "Bacon",
-        "Salame",
-        "Cebola roxa"
+        "Cheddar"
       ],
       "status": "Requested",
       "id": 3
     },
     {
-      "name": "Developer",
-      "meat": "Maminha",
-      "bread": [
-        {
-          "id": 1,
-          "tipo": "Italiano Branco"
-        },
-        {
-          "id": 2,
-          "tipo": "3 Queijos"
-        },
-        {
-          "id": 3,
-          "tipo": "Parmesão e Orégano"
-        },
-        {
-          "id": 4,
-          "tipo": "Integral"
-        }
-      ],
+      "name": "Pedro",
+      "meat": "Alcatra",
+      "bread": "3 Queijos",
       "optionals": [
         "Salame",
-        "Cebola roxa",
-        "Cheddar"
+        "Cebola roxa"
       ],
       "status": "Requested",
       "id": 4
     },
     {
-      "name": "feature/createMusicController",
-      "meat": "Picanha",
-      "bread": [
-        {
-          "id": 1,
-          "tipo": "Italiano Branco"
-        },
-        {
-          "id": 2,
-          "tipo": "3 Queijos"
-        },
-        {
-          "id": 3,
-          "tipo": "Parmesão e Orégano"
-        },
-        {
-          "id": 4,
-          "tipo": "Integral"
-        }
-      ],
+      "name": "Henriquieta",
+      "meat": null,
+      "bread": "3 Queijos",
       "optionals": [
         "Bacon",
-        "Cheddar"
+        "Pepino"
       ],
       "status": "Requested",
       "id": 5
+    },
+    {
+      "name": "IMP-3",
+      "meat": "",
+      "bread": "",
+      "optionals": [
+        "Bacon"
+      ],
+      "status": "Requested",
+      "id": 6
     }
   ]
 }

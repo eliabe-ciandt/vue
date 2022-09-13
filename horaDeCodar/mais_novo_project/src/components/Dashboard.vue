@@ -18,13 +18,17 @@
                 <div>{{ burger.meat }}</div>
                 <div>
                     <ul>
-                        <li>salame</li>
-                        <li>bacon</li>
+                        <li v-for="(optional, index) in burger.optionals"
+                        :key="index">{{ optional }}</li>
                     </ul>
                 </div>
                 <div>
                     <select name="status" class="status">
                         <option value="">Select status</option>
+                        <option v-for="s in status" :key="s.id" value="s.tipo"
+                        :selected="burger.status == s.tipo">
+                            {{ s.tipo }}
+                        </option>
                     </select>
                     <button class="delete-btn">Cancel</button>
                 </div>
@@ -52,7 +56,15 @@ export default {
 
       this.burgers = data;
 
-    //   TODO: Retrieving status
+      //   TODO: Retrieving status
+      this.getStatus();
+    },
+    async getStatus() {
+      const req = await fetch('http://localhost:3000/status');
+
+      const data = await req.json();
+
+      this.status = data;
     },
   },
   mounted() {
