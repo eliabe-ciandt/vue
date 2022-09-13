@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Esta é uma descrição da pessoa {{ nome }}</h2>
-    <Info />
+    <Info :email="email" />
     <Form />
   </div>
 </template>
@@ -19,6 +19,7 @@ export default {
   data() {
     return {
       nome: "que vos fala",
+      email: "eliabe@ciandt.com",
     };
   },
 };

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>{{ email }}</p>
     <p v-if="esta_trabalhando">Atualmente trabalho no KOBOSS</p>
     <p v-else>Tô no deserto</p>
     <p>Conheço as seguintes tecnologias do back-end:</p>
@@ -40,7 +41,6 @@ export default {
     return {
       esta_trabalhando: true,
       mostrar_email: false,
-      email: "eliabe@ci&t.com",
       meu_link: "https://github.com/eliabe-ciandt",
       texto_botao: "Mostrar e-mail",
       backEnd: ["Java", "Python", "Node"],
@@ -60,6 +60,10 @@ export default {
         ? "Esconder e-mail"
         : "Mostrar e-mail";
     },
+  },
+  props: {
+    // eslint-disable-next-line vue/no-dupe-keys
+    email: String,
   },
 };
 </script>
