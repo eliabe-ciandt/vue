@@ -79,18 +79,6 @@
   ],
   "burgers": [
     {
-      "name": "Leandro",
-      "meat": "Alcatra",
-      "bread": "Italiano Branco",
-      "optionals": [
-        "Bacon",
-        "Salame",
-        "Cheddar"
-      ],
-      "status": "Requested",
-      "id": 1
-    },
-    {
       "name": "Micaela",
       "meat": "Picanha",
       "bread": "3 Queijos",
@@ -99,51 +87,8 @@
         "Bacon",
         "Cheddar"
       ],
-      "status": "Requested",
+      "status": "Solicitado",
       "id": 2
-    },
-    {
-      "name": "Fernando",
-      "meat": "Picanha",
-      "bread": "Parmesão e Orégano",
-      "optionals": [
-        "Bacon",
-        "Cheddar"
-      ],
-      "status": "Requested",
-      "id": 3
-    },
-    {
-      "name": "Pedro",
-      "meat": "Alcatra",
-      "bread": "3 Queijos",
-      "optionals": [
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Requested",
-      "id": 4
-    },
-    {
-      "name": "Henriquieta",
-      "meat": null,
-      "bread": "3 Queijos",
-      "optionals": [
-        "Bacon",
-        "Pepino"
-      ],
-      "status": "Requested",
-      "id": 5
-    },
-    {
-      "name": "IMP-3",
-      "meat": "",
-      "bread": "",
-      "optionals": [
-        "Bacon"
-      ],
-      "status": "Requested",
-      "id": 6
     }
   ]
 }

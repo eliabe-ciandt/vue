@@ -1,5 +1,6 @@
 <template>
     <div id="burger-table">
+        <Message :msg="msg" v-show="msg" />
         <div>
             <div id="burger-table-heading">
                 <div class="order-id">#:</div>
@@ -23,14 +24,14 @@
                     </ul>
                 </div>
                 <div>
-                    <select name="status" class="status">
+                    <select name="status" class="status" @change="updateBurger($event, burger.id)">
                         <option value="">Select status</option>
-                        <option v-for="s in status" :key="s.id" value="s.tipo"
+                        <option v-for="s in status" :key="s.id" :value="s.tipo"
                         :selected="burger.status == s.tipo">
                             {{ s.tipo }}
                         </option>
                     </select>
-                    <button class="delete-btn">Cancel</button>
+                    <button class="delete-btn" @click="deleteBurger(burger.id)">Cancel</button>
                 </div>
             </div>
         </div>
@@ -38,6 +39,8 @@
 </template>
 
 <script>
+import Message from './Message.vue';
+
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Dashboard',
@@ -46,6 +49,7 @@ export default {
       burgers: null,
       burgers_id: null,
       status: [],
+      msg: null,
     };
   },
   methods: {
@@ -66,9 +70,44 @@ export default {
 
       this.status = data;
     },
+    async deleteBurger(id) {
+      const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+        method: 'DELETE',
+      });
+
+      const res = await req.json();
+
+      this.getOrders();
+
+      this.msg = `Pedido nº ${id} cancelado :(`;
+
+      // eslint-disable-next-line no-return-assign
+      setTimeout(() => this.msg = '', 5000);
+    },
+    async updateBurger(event, id) {
+      const option = event.target.value;
+      const dataJson = JSON.stringify({ status: option });
+
+      const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: dataJson,
+      });
+
+      const res = await req.json();
+
+      this.msg = `Pedido nº ${res.id} alterado para "${res.status.toLowerCase()}" :)`;
+
+      // eslint-disable-next-line no-return-assign
+      setTimeout(() => this.msg = '', 5000);
+    },
   },
   mounted() {
     this.getOrders();
+  },
+
+  components: {
+    Message,
   },
 };
 
