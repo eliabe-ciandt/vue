@@ -75,7 +75,7 @@ export default {
         method: 'DELETE',
       });
 
-      const res = await req.json();
+      await req.json();
 
       this.getOrders();
 

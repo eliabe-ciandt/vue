@@ -87,8 +87,19 @@
         "Bacon",
         "Cheddar"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 2
+    },
+    {
+      "name": "Raimundo",
+      "meat": "Picanha",
+      "bread": "Italiano Branco",
+      "optionals": [
+        "Cheddar",
+        "Salame"
+      ],
+      "status": "Em produção",
+      "id": 4
     }
   ]
 }
